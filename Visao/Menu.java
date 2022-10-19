@@ -1,5 +1,7 @@
 package Visao;
 
-public class Menu {
+public abstract class Menu {
+
+    public abstract void mostrarMenu();
     
 }
