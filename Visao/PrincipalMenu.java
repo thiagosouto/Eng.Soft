@@ -17,9 +17,18 @@ public class PrincipalMenu extends Menu{
 
             switch(operador){
                 case 1:
+                String nome = "Produto";
+                Fabrica Fabrica = getFactory(nome);
+                Produto produto = FabricaProd.packModel();
+                ProdutoMenu();
+
                 break;
 
                 case 2:
+                String nome = "Venda";
+                Fabrica.getFactory(nome);
+                Produto produto = FabricaVenda.packModel();
+                VendaMenu();
                 break;
 
                 case 0:
