@@ -21,7 +21,6 @@ public class VendaMenu extends Menu{
         while(operador != 6){
             switch(operador){
                 case 1:
-                incluir();
                 break;
 
                 case 2:

@@ -21,7 +21,6 @@ public class PrincipalMenu extends Menu{
                 Fabrica Fabrica = getFactory(nome);
                 Produto produto = FabricaProd.packModel();
                 ProdutoMenu();
-
                 break;
 
                 case 2:

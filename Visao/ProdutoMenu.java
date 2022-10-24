@@ -24,20 +24,27 @@ public class ProdutoMenu extends Menu{
         while(operador != 6){
             switch(operador){
                 case 1:
-                
+                Controlador.incluir();
                 break;
 
                 case 2:
+                Controlador.excluir();
                 break;
 
                 case 3:
-                
+                Controlador.alterar();
                 break;
 
                 case 4:
+                System.out.println("\nInforme o id: ");
+                int id = ler.nextInt();
+                Controlador.busca(id);
                 break;
 
                 case 5:
+                System.out.println("\nInforme o nome: ");
+                String nome = ler.nextLine();
+                Controlador.busca(nome);
                 break;
 
                 case 6:
@@ -49,84 +56,6 @@ public class ProdutoMenu extends Menu{
             }
         }
         
-    }
-    
-    public static void incluir(){
-        String nome = "Produto";
-        Fabrica fabrica = getFactory(nome);
-        Produto produto = FabricaProd.packModel();
-
-        System.out.println("\nNome do produto: ");
-        String nome = ler.nextLine();
-        protudo.setNome(nome);
-                
-        produto.setId(id);
-        id++;
-                
-        System.out.println("\nInforme a quantidade: ");
-        int quant = ler.nextInt();
-        produto.setQuantidade(quant);
-
-        System.out.println("\nInforme o valor: ");
-        float valor = ler.nextFloat();
-        produto.setValor(valor);
-    }
-
-    public static void alterar(){
-        String nome = "Produto";
-        Fabrica fabrica = getFactory(nome);
-        Produto produto = FabricaProd.packModel();
-    }
-
-    public static void excluir(){
-        String nome = "Produto";
-        Fabrica fabrica = getFactory(nome);
-        Produto produto = FabricaProd.packModel();
-    }
-
-    public static void buscaID(){
-        String nome = "Produto";
-        Fabrica fabrica = getFactory(nome);
-        Produto produto = FabricaProd.packModel();
-
-        System.out.println("Informe o ID: ");
-        int idBusca = ler.nextInt();
-        int comparador;
-
-        boolean busca = true;
-        while(executando){
-            comparador = produto.getId();
-            if(comparador == id){
-                System.out.println(produto.toString());
-            }
-
-            if(comparador == NULL){
-                executando= false;
-            }
-        }
-
-    }
-
-    public static void buscaNome(){
-        String nome = "Produto";
-        Fabrica fabrica = getFactory(nome);
-        Produto produto = FabricaProd.packModel();
-
-        System.out.println("Informe o Nome: ");
-        String nomeBusca = ler.nextLine();
-        String comparador;
-
-        boolean busca = true;
-        while(executando){
-            comparador = produto.getNome();
-            if(comparador == nomeBusca){
-                System.out.println(produto.toString()); 
-            }
-
-            if(comparador == NULL){
-                executando= false;
-            }
-        }
     }
 
 }
